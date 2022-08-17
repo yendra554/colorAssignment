@@ -1,0 +1,49 @@
+<body>
+  <header class="header">
+    <h1>List Of Employees</h1>
+    <h2 style="margin-left: 3rem">
+      <button routerLink="/login" class="btn btn btn-primary danger mg-2">
+        Logout
+      </button>
+    </h2>
+  </header>
+  <main>
+    <div class="container-xxl" style="margin-top: 3rem">
+      <table class="table table-striped">
+        <thead>
+          <tr class="table-primary">
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Company</th>
+            <th scope="col">Designation</th>
+            <th scope="col">Compnay Logo</th>
+            <th scope="col">View</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employees">
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.company }}</td>
+            <td>{{ employee.designation }}</td>
+            <td>
+              <img height="50" width="100" src="{{ employee.company_logo }}" />
+            </td>
+            <td>
+              <button
+                class="btn btn btn-primary"
+                [routerLink]="['/employee-details/' + employee.id]"
+                target="_blank"
+              >
+                View More
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <footer style="margin-top: 2rem">
+    <p>End Of List</p>
+  </footer>
+</body>

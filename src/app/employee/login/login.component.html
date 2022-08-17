@@ -1,0 +1,58 @@
+<body>
+  <header class="header">
+    <h1>Login Portal</h1>
+  </header>
+  <main class="main">
+    <form
+      id="login_form"
+      class="form_class"
+      [formGroup]="form"
+      (ngSubmit)="login()"
+    >
+      <div class="form_div">
+        <label>Login:</label>
+        <input
+          class="field_class form-controls"
+          formControlName="user_id"
+          name="user_id"
+          type="text"
+          placeholder="Enter your user_id/email"
+          autofocus
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            form.controls['user_id'].dirty &&
+            form.hasError('required', 'user_id')
+          "
+          >*Enter valid email or user_id</span
+        >
+        <br />
+        <label>Password:</label>
+        <input
+          id="pass"
+          class="field_class"
+          formControlName="password"
+          name="password"
+          type="password"
+          placeholder="Enter your password"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            form.controls['password'].dirty &&
+            form.hasError('required', 'password')
+          "
+          >*Enter valid password</span
+        >
+        <br />
+        <button class="submit_class" [disabled]="!form.valid" type="submit">
+          Login
+        </button>
+      </div>
+    </form>
+  </main>
+  <footer>
+    <p>Copyright © 2022 ColorBracket</p>
+  </footer>
+</body>

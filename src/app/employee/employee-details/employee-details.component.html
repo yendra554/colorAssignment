@@ -1,0 +1,37 @@
+<body>
+  <header class="header">
+    <h1>Details Of Employees</h1>
+    <h2 style="margin-left: 3rem">
+      <button routerLink="/login" class="btn btn btn-primary danger mg-2">
+        Logout
+      </button>
+    </h2>
+  </header>
+  <main>
+    <div class="container list-group-item-primary" style="margin-top: 3rem">
+      <ul class="list-group">
+        <li class="list-group-item" style="margin-top: 2rem">
+          ID: {{ employeedetail.id }}
+        </li>
+        <li class="list-group-item">Name: {{ employeedetail.name }}</li>
+        <li class="list-group-item">Rating: {{ employeedetail.rating }}</li>
+        <li class="list-group-item">Company: {{ employeedetail.company }}</li>
+        <li class="list-group-item">
+          Interests: {{ employeedetail.interests }}
+        </li>
+        <li class="list-group-item">
+          View More: {{ employeedetail.view_more }}
+        </li>
+        <li class="list-group-item">
+          Designation: {{ employeedetail.designation }}
+        </li>
+        <li class="list-group-item">
+          Company Logo: {{ employeedetail.company_logo }}
+        </li>
+        <li class="list-group-item">
+          Job Descripton: {{ employeedetail.job_descripton }}
+        </li>
+      </ul>
+    </div>
+  </main>
+</body>
