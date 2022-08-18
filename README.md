@@ -1,5 +1,5 @@
-# LOGIN AND TABLE , LIST VIEW | MVP ANGULARR
-version 14.1.2.
+# LOGIN AND TABLE , LIST VIEW | MVP ANGULAR
+Angular(version 14.1.2).
 
 
 ## Project Desctiptions:
